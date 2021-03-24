@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>当两个样式都使用!important时</title>
+  <style>
+    .box{
+      width: 100px;
+      height: 100px;
+      background-color: red !important;
+    }
+
+    div{
+      width: 100px;
+      height: 100px;
+      background-color: green !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- 当两个样式都使用!important时，权重值大的优先级更高 -->
+  <div class='box'></div>
+</body>
+</html>
