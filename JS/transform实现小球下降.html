@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .boll-btn {
+    width: 100px;
+    height: 30px;
+    line-height: 28px;
+    border: none;
+    border-radius: 5px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+.boll {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #03A9F4;
+    transform: translateY(0px);
+    margin-bottom: 300px;
+  }
+
+</style>
+
+<body>
+  <h2>Js操作元素的transform属性值实现小球下落动效</h2>
+  <button class="boll-btn" id="boll-btn">小球下落</button>
+  <div class="boll" id="boll"></div>
+
+</body>
+  <script>
+    const domBoll = document.getElementById('boll')
+    document.getElementById('boll-btn').onclick=function() {
+      let distance = 0
+      let timer = setInterval(() => {
+      if(distance >= 300) {
+        clearInterval(timer)
+        }  
+        domBoll.style.transform = 'translateY('+ distance++ +'px)'
+      }, 30)
+    }
+
+  </script>
+</html>
